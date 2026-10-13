@@ -1,0 +1,45 @@
+{
+  "voz": "ef_dora",
+  "velocidad": 1.06,
+  "frases": [
+    {
+      "id": "hola",
+      "texto": "Hola, somos Alldesign Karl, un pequeño taller artesanal de Aragón."
+    },
+    {
+      "id": "historia",
+      "texto": "Todo empezó en casa, con nuestra pasión por las manualidades, y poco a poco se convirtió en nuestro trabajo."
+    },
+    {
+      "id": "como",
+      "texto": "Hacemos cada pieza a mano, una a una, con flores naturales, resina cristalina y yeso cerámico."
+    },
+    {
+      "id": "productos",
+      "texto": "Letras personalizadas e iluminadas, calaveras y calabazas de resina, colgantes decorativos, y nuestro ambientador del Cachirulo."
+    },
+    {
+      "id": "personaliza",
+      "texto": "Muchas se personalizan con los colores y la inicial que elijas."
+    },
+    {
+      "id": "calidad",
+      "texto": "Usamos materiales de primera calidad, y cada pieza es única."
+    },
+    {
+      "id": "mayoristas",
+      "texto": "Colaboramos con tiendas y vendemos al por mayor, con condiciones especiales para profesionales."
+    },
+    {
+      "id": "tienda",
+      "texto": "En nuestra tienda online creas tu cuenta de mayorista: pedido mínimo de cien euros y envío a toda Europa."
+    },
+    {
+      "id": "cierre",
+      "texto": "Somos Alldesign Karl: artesanía hecha a mano en Aragón."
+    }
+  ],
+  "pronunciacion": {
+    "Alldesign Karl": "Ol-disáin Karl"
+  }
+}

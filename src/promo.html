@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Alldesign Karl · Vídeo de presentación</title>
+<meta name="viewport" content="width=1080">
+<style>
+@font-face{font-family:'Pinyon Script';src:url(../assets/fonts/pinyon-script-latin-400-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Cormorant Garamond';font-weight:400;src:url(../assets/fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Cormorant Garamond';font-weight:500;src:url(../assets/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Cormorant Garamond';font-weight:600;src:url(../assets/fonts/cormorant-garamond-latin-600-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Cormorant Garamond';font-weight:400;font-style:italic;src:url(../assets/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;src:url(../assets/fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Montserrat';font-weight:400;src:url(../assets/fonts/montserrat-latin-400-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Montserrat';font-weight:500;src:url(../assets/fonts/montserrat-latin-500-normal.woff2) format('woff2');font-display:block}
+@font-face{font-family:'Montserrat';font-weight:600;src:url(../assets/fonts/montserrat-latin-600-normal.woff2) format('woff2');font-display:block}
+
+:root{
+  --ivory:#F6F1E8;--cream:#EFE6D8;--sand:#E4D7C3;--line:#D8C9B2;--ink:#4A3C2F;--ink-soft:#6E5E4E;
+  --gold:#B48A4E;--gold-soft:#D6B98A;--blue:#2C4C94;--white:#FFFDF9;
+  --script:'Pinyon Script',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ivory)}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:var(--ivory);color:var(--ink);font-family:var(--serif)}
+.scene{position:absolute;inset:0;overflow:hidden;background:var(--ivory);visibility:hidden;will-change:opacity,transform}
+.paper{position:absolute;inset:0;background:
+  radial-gradient(1200px 900px at 20% 10%,rgba(255,253,249,.9),rgba(255,253,249,0) 70%),
+  radial-gradient(1000px 1000px at 90% 100%,rgba(228,215,195,.55),rgba(228,215,195,0) 70%),var(--ivory)}
+.abs{position:absolute}
+.center{left:0;right:0;text-align:center}
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:28px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.script{font-family:var(--script);font-weight:400;color:var(--ink);line-height:1.05}
+.title{font-family:var(--script);font-size:132px;color:var(--ink);line-height:1.1}
+.rule{display:flex;align-items:center;justify-content:center;gap:22px;color:var(--gold)}
+.rule i{display:block;height:2px;width:150px;background:var(--gold-soft)}
+.rule b{display:block;width:14px;height:14px;background:var(--gold);transform:rotate(45deg)}
+.frame{position:absolute;overflow:hidden;border-radius:30px;background:var(--sand);box-shadow:0 30px 70px rgba(74,60,47,.22),0 6px 18px rgba(74,60,47,.12)}
+.frame img,.cover{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;will-change:transform}
+.chip{display:inline-flex;align-items:center;gap:14px;padding:16px 30px;border-radius:999px;background:var(--white);
+  border:2px solid var(--line);font-family:var(--sans);font-weight:600;font-size:30px;letter-spacing:.04em;color:var(--ink);
+  box-shadow:0 10px 26px rgba(74,60,47,.10);white-space:nowrap}
+.chip svg{width:30px;height:30px;flex:none}
+.motes{position:absolute;inset:0;pointer-events:none}
+.mote{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(214,185,138,.95),rgba(214,185,138,0) 70%)}
+
+/* subtítulos */
+#cap{position:absolute;left:60px;right:60px;top:1700px;display:flex;justify-content:center;z-index:50;pointer-events:none}
+#cap span{display:inline-block;max-width:960px;padding:16px 34px 18px;border-radius:22px;background:rgba(58,46,35,.84);color:#FFF9EF;
+  font-family:var(--sans);font-weight:600;font-size:46px;line-height:1.25;text-align:center;letter-spacing:.005em;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+#cap b{color:var(--gold-soft);font-weight:600}
+
+/* 1 · presentación */
+#s1 .hero{position:absolute;left:-560px;top:0;width:2880px;height:1920px;object-fit:cover}
+#s1 .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,241,232,.25),rgba(246,241,232,.62) 38%,rgba(246,241,232,.7) 62%,rgba(246,241,232,.35))}
+#s1 .name{font-size:162px;white-space:nowrap}
+#s1 .tag{font-family:var(--script);font-size:74px;color:var(--ink);line-height:1.15}
+.badge{display:inline-flex;align-items:center;gap:20px;padding:20px 38px;border-radius:999px;background:var(--ink);color:var(--ivory);
+  font-family:var(--sans);font-weight:600;font-size:30px;letter-spacing:.22em;text-transform:uppercase;box-shadow:0 16px 40px rgba(74,60,47,.3)}
+.flag{width:54px;height:38px;border-radius:5px;overflow:hidden;background:repeating-linear-gradient(180deg,#F2C230 0 4.2px,#C8102E 4.2px 8.4px);box-shadow:0 0 0 2px rgba(255,255,255,.4)}
+
+/* 2 · historia */
+.polaroid{position:absolute;background:var(--white);padding:26px 26px 120px;box-shadow:0 34px 70px rgba(74,60,47,.25),0 4px 12px rgba(74,60,47,.12);border-radius:6px}
+.polaroid .ph{position:relative;overflow:hidden;background:var(--sand)}
+.polaroid .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.polaroid .hand{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-family:var(--script);font-size:66px;color:var(--ink)}
+.mini{padding:14px 14px 56px}
+.mini .hand{font-size:36px;bottom:10px}
+
+/* 3 · cómo */
+.checks{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 22px}
+.checks .chip{font-size:31px}
+
+/* 4 · productos */
+.card{position:absolute;left:120px;top:400px;width:840px}
+.card .frame{position:relative;width:840px;height:1000px}
+.card .lbl{margin-top:34px;text-align:center}
+.card .nm{font-family:var(--serif);font-style:italic;font-weight:500;font-size:68px;color:var(--ink);line-height:1.05}
+.card .ds{margin-top:14px;font-family:var(--sans);font-weight:600;font-size:25px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.ribbon{position:absolute;left:30px;top:30px;padding:10px 20px;background:var(--blue);color:#fff;font-family:var(--sans);font-weight:600;font-size:22px;letter-spacing:.24em;text-transform:uppercase;border-radius:4px}
+.count{font-family:var(--sans);font-weight:600;font-size:26px;letter-spacing:.2em;color:var(--ink-soft)}
+
+/* 5 · personaliza */
+.sw{position:absolute;width:62px;height:62px;border-radius:50%;box-shadow:inset 0 0 0 3px rgba(255,255,255,.7),0 6px 14px rgba(74,60,47,.18)}
+.sw.on{outline:4px solid var(--ink);outline-offset:6px}
+
+/* 6 · calidad */
+.seal text{font-family:var(--sans);font-weight:600;letter-spacing:.3em;fill:var(--gold)}
+
+/* 8 · tienda */
+.phone{position:absolute;left:220px;top:330px;width:640px;height:1290px;border-radius:86px;background:#1c1814;
+  box-shadow:0 50px 90px rgba(40,30,20,.35),0 0 0 3px #3a332c inset,0 0 0 2px #0e0c0a}
+.phone .scr{position:absolute;left:20px;top:20px;width:600px;height:1250px;border-radius:68px;overflow:hidden;background:var(--ivory)}
+.phone .bar{position:absolute;left:0;top:0;width:600px;height:142px;background:rgba(246,241,232,.97);z-index:3;border-bottom:1px solid var(--line)}
+.phone .notch{position:absolute;left:228px;top:16px;width:144px;height:40px;border-radius:22px;background:#1c1814;z-index:4}
+.phone .clock{position:absolute;left:58px;top:20px;font-family:var(--sans);font-weight:600;font-size:26px;color:#1c1814;z-index:4}
+.phone .url{position:absolute;left:30px;right:30px;top:72px;height:56px;border-radius:16px;background:#E9E0D2;display:flex;align-items:center;justify-content:center;gap:12px;
+  font-family:var(--sans);font-weight:500;font-size:27px;color:#3d342b;z-index:4}
+.phone .url svg{width:22px;height:22px}
+.phone .pg{position:absolute;left:0;top:142px;width:600px;will-change:transform}
+.phone .hl{position:absolute;border-radius:14px;box-shadow:0 0 0 5px var(--gold),0 0 40px 10px rgba(214,185,138,.65);z-index:2}
+.sticker{position:absolute;width:250px;height:250px;border-radius:50%;background:var(--gold);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;box-shadow:0 20px 40px rgba(74,60,47,.3),inset 0 0 0 8px rgba(255,255,255,.25);z-index:5}
+.sticker .big{font-family:var(--serif);font-weight:600;font-size:84px;line-height:.9}
+.sticker .sm{font-family:var(--sans);font-weight:600;font-size:21px;letter-spacing:.14em;text-transform:uppercase;margin-top:8px;line-height:1.3}
+
+/* 9 · cierre */
+.thumb{position:absolute;width:168px;height:168px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 6px var(--white),0 14px 30px rgba(74,60,47,.25)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.contact{display:flex;flex-direction:column;align-items:center;gap:26px}
+.contact div{display:flex;align-items:center;gap:22px;font-family:var(--serif);font-weight:600;font-size:56px;color:var(--ink)}
+.contact svg{width:50px;height:50px;flex:none}
+.pill{display:inline-block;padding:22px 44px;border-radius:999px;background:var(--blue);color:#fff;font-family:var(--sans);font-weight:600;font-size:30px;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 16px 36px rgba(44,76,148,.3)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#B48A4E"/><path d="M7 12.5l3.2 3.2L17.5 8.4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="#3d342b"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="#3d342b" stroke-width="2.2"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="#B48A4E" stroke-width="1.8"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19" fill="none" stroke="#B48A4E" stroke-width="1.6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.1L2.6 21.4l4.8-1.3A9.4 9.4 0 1 0 12 2.6z" fill="none" stroke="#B48A4E" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 7.6c.3-.6.6-.6.9-.6h.6c.2 0 .5.1.6.5l.8 1.9c.1.3 0 .6-.2.8l-.6.7c-.1.2-.2.4 0 .6.4.7 1.7 2.3 3.3 2.9.2.1.4 0 .6-.1l.8-.9c.2-.2.5-.3.8-.2l1.8.9c.3.1.4.4.4.6 0 .5-.2 1.3-.9 1.8-.7.5-1.8.7-3.4.1-2.3-.9-4.4-3.1-5.2-4.6-.8-1.4-.6-2.9-.3-3.4z" fill="#B48A4E"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="#B48A4E" stroke-width="1.8"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="#B48A4E" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9l1.6-5h14.8L21 9M3 9h18v1.2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM4.5 12.5V20h15v-7.5M9.5 20v-5h5v5" fill="none" stroke="#B48A4E" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-flower" viewBox="0 0 24 24"><g fill="#B48A4E"><circle cx="12" cy="6.5" r="3.3"/><circle cx="17.3" cy="10.3" r="3.3"/><circle cx="15.3" cy="16.5" r="3.3"/><circle cx="8.7" cy="16.5" r="3.3"/><circle cx="6.7" cy="10.3" r="3.3"/></g><circle cx="12" cy="12" r="2.6" fill="#fff"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5" fill="none" stroke="#B48A4E" stroke-width="1.7"/><path d="M2.5 9h19M12 9v11.5M12 9c-1.5-3-5.5-4.5-5.5-2S10 9 12 9zm0 0c1.5-3 5.5-4.5 5.5-2S14 9 12 9z" fill="none" stroke="#B48A4E" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<div id="stage">
+
+  <!-- 1 · Hola, somos Alldesign Karl, un pequeño taller artesanal de Aragón -->
+  <section class="scene" id="s1">
+    <img class="hero" src="../build/prep/hero-porcelana.jpg" alt="">
+    <div class="veil"></div>
+    <div class="motes" data-n="26" data-seed="3"></div>
+    <div class="abs center eyebrow" id="s1-eb" style="top:640px">Taller artesanal · Aragón</div>
+    <div class="abs center" id="s1-name-wrap" style="top:720px;height:240px">
+      <div class="script name" id="s1-name" style="display:inline-block">Alldesign Karl</div>
+    </div>
+    <div class="abs center rule" id="s1-rule" style="top:985px"><i></i><b></b><i></i></div>
+    <div class="abs center tag" id="s1-tag" style="top:1030px">La belleza de lo artesanal,<br>en cada detalle.</div>
+    <div class="abs center" id="s1-badge" style="top:1300px"><span class="badge"><span class="flag"></span>Hecho a mano en Aragón</span></div>
+  </section>
+
+  <!-- 2 · Todo empezó en casa… -->
+  <section class="scene" id="s2">
+    <div class="paper"></div>
+    <div class="motes" data-n="18" data-seed="7"></div>
+    <div class="abs center eyebrow" id="s2-eb" style="top:178px">Cómo empezamos</div>
+    <div class="abs center title" id="s2-title" style="top:212px">Nuestra historia</div>
+    <div class="polaroid" id="s2-pol" style="left:64px;top:470px;width:952px">
+      <div class="ph" style="width:900px;height:486px"><img id="s2-img" src="../build/prep/nosotros.jpg" alt=""></div>
+      <div class="hand">Todo empezó en casa</div>
+    </div>
+    <div class="polaroid mini" id="s2-m0" style="left:70px;top:1215px;width:276px"><div class="ph" style="width:248px;height:300px"><img src="../build/prep/letra-a-3-crema.jpg" alt=""></div><div class="hand">flores</div></div>
+    <div class="polaroid mini" id="s2-m1" style="left:402px;top:1185px;width:276px"><div class="ph" style="width:248px;height:300px"><img src="../build/prep/letra-resina-dia.jpg" alt=""></div><div class="hand">resina</div></div>
+    <div class="polaroid mini" id="s2-m2" style="left:734px;top:1215px;width:276px"><div class="ph" style="width:248px;height:300px"><img src="../build/prep/ambientador-cachirulo.jpg" alt="" style="object-position:50% 50%"></div><div class="hand">yeso</div></div>
+  </section>
+
+  <!-- 3 · Hacemos cada pieza a mano… -->
+  <section class="scene" id="s3">
+    <div class="paper"></div>
+    <div class="abs center eyebrow" id="s3-eb" style="top:150px">Así lo hacemos</div>
+    <div class="abs center title" id="s3-title" style="top:184px">A mano, una a una</div>
+    <div class="frame" id="s3-frame" style="left:90px;top:420px;width:900px;height:960px">
+      <img id="s3-i0" src="../build/prep/letra-a-3-crema.jpg" alt="">
+      <img id="s3-i1" src="../build/prep/letra-resina-dia.jpg" alt="">
+      <img id="s3-i2" src="../build/prep/calavera-flores-sin-luz.jpg" alt="">
+      <img id="s3-i3" src="../build/prep/ambientador-cachirulo.jpg" alt="">
+    </div>
+    <div class="abs center checks" id="s3-checks" style="top:1430px;left:60px;right:60px">
+      <span class="chip" id="s3-c0"><svg><use href="#i-check"/></svg>Hecho a mano</span>
+      <span class="chip" id="s3-c1"><svg><use href="#i-check"/></svg>Flores naturales</span>
+      <span class="chip" id="s3-c2"><svg><use href="#i-check"/></svg>Resina cristalina</span>
+      <span class="chip" id="s3-c3"><svg><use href="#i-check"/></svg>Yeso cerámico</span>
+    </div>
+  </section>
+
+  <!-- 4 · Productos -->
+  <section class="scene" id="s4">
+    <div class="paper"></div>
+    <div class="abs center eyebrow" style="top:150px">Nuestros productos</div>
+    <div class="abs center title" style="top:184px">Nuestras piezas</div>
+    <div id="s4-cards"></div>
+    <div class="abs center count" id="s4-count" style="top:1630px"></div>
+  </section>
+
+  <!-- 5 · Personaliza -->
+  <section class="scene" id="s5">
+    <div class="paper"></div>
+    <div class="abs center eyebrow" style="top:150px">Personalizadas</div>
+    <div class="abs center title" style="top:192px;font-size:112px">Tus colores, tu inicial</div>
+    <div class="frame" id="s5-a" style="left:60px;top:440px;width:468px;height:572px"></div>
+    <div class="frame" id="s5-b" style="left:552px;top:440px;width:468px;height:572px"></div>
+    <div class="abs count" style="top:1040px;left:60px;width:468px;text-align:center">LETRA DE RESINA</div>
+    <div class="abs count" style="top:1040px;left:552px;width:468px;text-align:center">LETRA DECORADA</div>
+    <div id="s5-sw"></div>
+    <div class="abs center" id="s5-note" style="top:1440px"><span class="chip"><svg><use href="#i-flower"/></svg>Tú eliges el color y la inicial</span></div>
+  </section>
+
+  <!-- 6 · Calidad -->
+  <section class="scene" id="s6">
+    <div class="paper"></div>
+    <div class="motes" data-n="22" data-seed="11"></div>
+    <svg class="abs seal" id="s6-seal" viewBox="0 0 400 400" style="left:330px;top:150px;width:420px;height:420px">
+      <defs><path id="ring" d="M200,200 m-150,0 a150,150 0 1,1 300,0 a150,150 0 1,1 -300,0"/></defs>
+      <g id="s6-rot"><text font-size="21"><textPath href="#ring">HECHO A MANO · ALLDESIGN KARL · ARAGÓN · HECHO A MANO · ALLDESIGN KARL · ARAGÓN ·</textPath></text></g>
+      <circle id="s6-c1" cx="200" cy="200" r="122" fill="none" stroke="#B48A4E" stroke-width="3"/>
+      <circle id="s6-c2" cx="200" cy="200" r="112" fill="#FFFDF9" stroke="#D6B98A" stroke-width="1.5"/>
+      <g id="s6-in">
+        <path d="M200 112l9 18 20 3-14.5 14 3.5 20-18-9.5-18 9.5 3.5-20-14.5-14 20-3z" fill="#B48A4E"/>
+        <text x="200" y="215" text-anchor="middle" font-size="25" style="letter-spacing:.22em">PRIMERA</text>
+        <text x="200" y="250" text-anchor="middle" font-size="25" style="letter-spacing:.22em">CALIDAD</text>
+        <path d="M150 272h100" stroke="#D6B98A" stroke-width="2"/>
+      </g>
+    </svg>
+    <div class="abs center" id="s6-mat" style="top:1130px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:64px">Materiales de primera calidad</div>
+    <div class="abs center title" id="s6-title" style="top:640px">Piezas únicas</div>
+    <div class="abs center eyebrow" id="s6-sub" style="top:815px">No hay dos iguales</div>
+    <div id="s6-fan"></div>
+  </section>
+
+  <!-- 7 · Mayoristas -->
+  <section class="scene" id="s7">
+    <div class="paper"></div>
+    <div class="abs center eyebrow" id="s7-eb" style="top:150px">Para tiendas y empresas</div>
+    <div class="abs center title" id="s7-title" style="top:184px">Venta a mayoristas</div>
+    <svg class="abs" id="s7-shop" viewBox="0 0 900 900" style="left:90px;top:420px;width:900px;height:900px">
+      <defs>
+        <clipPath id="w0"><rect x="150" y="440" width="185" height="230" rx="8"/></clipPath>
+        <clipPath id="w1"><rect x="357" y="440" width="185" height="230" rx="8"/></clipPath>
+        <clipPath id="w2"><rect x="564" y="440" width="185" height="230" rx="8"/></clipPath>
+        <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE7B8"/><stop offset="1" stop-color="#F3D59C"/></linearGradient>
+        <radialGradient id="lamp" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#FFF4D6" stop-opacity=".95"/><stop offset="1" stop-color="#FFF4D6" stop-opacity="0"/></radialGradient>
+      </defs>
+      <g id="s7-fill" opacity="0">
+        <rect x="90" y="330" width="720" height="510" fill="#FFFDF9"/>
+        <rect x="130" y="420" width="640" height="270" fill="url(#glow)" id="s7-win"/>
+        <rect x="90" y="790" width="720" height="50" fill="#E4D7C3"/>
+        <rect x="250" y="235" width="400" height="76" rx="10" fill="#4A3C2F"/>
+        <text x="450" y="286" text-anchor="middle" font-family="Cormorant Garamond" font-weight="600" font-size="40" fill="#F6F1E8" style="letter-spacing:.32em">TU TIENDA</text>
+      </g>
+      <g id="s7-goods" opacity="0">
+        <image href="../build/prep/calabaza-resina-flores.jpg" x="150" y="440" width="185" height="231" preserveAspectRatio="xMidYMid slice" clip-path="url(#w0)"/>
+        <image href="../build/prep/calavera-flores-con-luz.jpg" x="357" y="440" width="185" height="231" preserveAspectRatio="xMidYMid slice" clip-path="url(#w1)"/>
+        <image href="../build/prep/letra-resina-iluminada.jpg" x="564" y="440" width="185" height="231" preserveAspectRatio="xMidYMid slice" clip-path="url(#w2)"/>
+        <rect x="130" y="420" width="640" height="150" fill="url(#lamp)" id="s7-lamp" opacity="0"/>
+      </g>
+      <g id="s7-awn" opacity="0">
+        <path d="M70 330 L110 160 H790 L830 330 Z" fill="#2C4C94"/>
+        <path d="M200 160 L180 330 M290 160 L285 330 M380 160 L385 330 M470 160 L485 330 M560 160 L585 330 M650 160 L685 330 M740 160 L780 330" stroke="#F6F1E8" stroke-width="44" opacity=".95" clip-path="url(#awnclip)"/>
+        <clipPath id="awnclip"><path d="M70 330 L110 160 H790 L830 330 Z"/></clipPath>
+        <path d="M70 330 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0 q37.5 40 75 0" fill="#2C4C94" stroke="#B48A4E" stroke-width="3"/>
+      </g>
+      <g id="s7-lines" fill="none" stroke="#B48A4E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path pathLength="1" d="M90 340 V840 H810 V340"/>
+        <path pathLength="1" d="M70 330 L110 160 H790 L830 330 Z"/>
+        <path pathLength="1" d="M130 420 H770 V690 H130 Z"/>
+        <path pathLength="1" d="M140 680 H760 M150 440 V670 M335 440 V670 M357 440 V670 M542 440 V670 M564 440 V670 M749 440 V670"/>
+        <path pathLength="1" d="M250 235 H650 V311 H250 Z"/>
+        <path pathLength="1" d="M60 840 H840"/>
+      </g>
+    </svg>
+    <div class="abs center checks" id="s7-chips" style="top:1300px;left:40px;right:40px">
+      <span class="chip" id="s7-c0"><svg><use href="#i-store"/></svg>Tiendas</span>
+      <span class="chip" id="s7-c1"><svg><use href="#i-flower"/></svg>Floristerías</span>
+      <span class="chip" id="s7-c2"><svg><use href="#i-gift"/></svg>Regalos</span>
+    </div>
+    <div class="abs center" id="s7-cond" style="top:1440px"><span class="pill">Condiciones especiales para profesionales</span></div>
+  </section>
+
+  <!-- 8 · Tienda online -->
+  <section class="scene" id="s8">
+    <div class="paper"></div>
+    <div class="abs center eyebrow" style="top:120px">Nuestra tienda online</div>
+    <div class="abs center" id="s8-url" style="top:168px;font-family:var(--serif);font-weight:600;font-size:84px;color:var(--blue);letter-spacing:.01em"></div>
+    <div class="phone" id="s8-phone">
+      <div class="scr">
+        <div class="bar"><div class="url"><svg><use href="#i-lock"/></svg>alldesignkarl.com</div></div>
+        <div class="clock">9:41</div>
+        <div class="notch"></div>
+        <div class="pg" id="s8-pg"><img id="s8-img" src="../build/prep/tienda.jpg" alt="" style="display:block;width:600px"><div class="hl" id="s8-hl"></div></div>
+      </div>
+    </div>
+    <div class="sticker" id="s8-st0" style="left:790px;top:860px"><div class="big">100 €</div><div class="sm">pedido<br>mínimo</div></div>
+    <div class="sticker" id="s8-st1" style="left:40px;top:1120px;background:var(--blue)"><div class="big" style="font-size:58px">Europa</div><div class="sm">envío a<br>toda Europa</div></div>
+  </section>
+
+  <!-- 9 · Cierre -->
+  <section class="scene" id="s9">
+    <div class="paper"></div>
+    <img class="cover" src="../build/prep/hero-porcelana.jpg" alt="" id="s9-bg" style="opacity:.18;left:-500px;width:2880px;object-fit:cover">
+    <div class="motes" data-n="24" data-seed="21"></div>
+    <div id="s9-thumbs"></div>
+    <div class="abs center" id="s9-name-wrap" style="top:580px;height:240px"><div class="script" id="s9-name" style="display:inline-block;font-size:150px;white-space:nowrap">Alldesign Karl</div></div>
+    <div class="abs center rule" id="s9-rule" style="top:835px"><i></i><b></b><i></i></div>
+    <div class="abs center" id="s9-tag" style="top:870px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:58px">Artesanía hecha a mano en Aragón</div>
+    <div class="abs center contact" id="s9-contact" style="top:1010px">
+      <div id="s9-l0"><svg><use href="#i-web"/></svg>alldesignkarl.com</div>
+      <div id="s9-l1"><svg><use href="#i-wa"/></svg>614 65 37 36</div>
+      <div id="s9-l2"><svg><use href="#i-mail"/></svg>alldesignkarl@gmail.com</div>
+    </div>
+    <div class="abs center" id="s9-pill" style="top:1360px"><span class="pill">Mayoristas · Crea tu cuenta en la web</span></div>
+    <div class="abs center eyebrow" id="s9-eb" style="top:1510px;color:var(--ink-soft)">Tienda online · Venta al por mayor</div>
+  </section>
+
+  <div id="cap"><span></span></div>
+</div>
+
+<script src="tiempos.js"></script>
+<script>
+(function () {
+  "use strict";
+  const FPS = 30, DUR = 50;
+  const $ = (id) => document.getElementById(id);
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const prog = (t, a, b) => clamp((t - a) / (b - a));
+  const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+  const out3 = (k) => 1 - Math.pow(1 - k, 3);
+  const outBack = (k) => { const c = 1.6; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
+  function rnd(seed) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+  const set = (el, op, tf) => { el.style.opacity = op; if (tf !== undefined) el.style.transform = tf; };
+  // aparece (desde abajo) entre a y a+d
+  function rise(el, t, a, d = 0.6, dy = 34) { const k = out3(prog(t, a, a + d)); set(el, k, `translateY(${(1 - k) * dy}px)`); }
+
+  /* ---------- tiempos de la locución ---------- */
+  const T = {};
+  window.TIEMPOS.forEach((f) => (T[f.id] = f));
+  const LEAD = 0.35;   // la imagen cambia un poco antes de que empiece la frase
+  const ORDER = ["hola", "historia", "como", "productos", "personaliza", "calidad", "mayoristas", "tienda", "cierre"];
+  const B = ORDER.map((id, i) => (i === 0 ? 0 : T[id].a - LEAD)).concat([DUR]);
+  const chunk = (id, i) => T[id].trozos[i];
+  // momento (estimado por sílabas) en que se dice una palabra dentro de un trozo
+  function wordAt(id, i, word) {
+    const c = chunk(id, i), txt = c.t, pos = txt.indexOf(word);
+    const syl = (s) => (s.toLowerCase().match(/[aeiouáéíóúü]+/g) || []).length;
+    return c.a + (c.b - c.a) * syl(txt.slice(0, pos)) / Math.max(1, syl(txt));
+  }
+
+  /* ---------- motas doradas ---------- */
+  document.querySelectorAll(".motes").forEach((m) => {
+    const r = rnd(Number(m.dataset.seed)), n = Number(m.dataset.n);
+    m._p = [];
+    for (let i = 0; i < n; i++) {
+      const d = document.createElement("div");
+      d.className = "mote";
+      const s = 6 + r() * 16;
+      d.style.width = d.style.height = s + "px";
+      m.appendChild(d);
+      m._p.push({ el: d, x: r() * 1080, y: r() * 1920, vx: (r() - 0.5) * 14, vy: -10 - r() * 26, ph: r() * 6.28, a: 0.25 + r() * 0.55 });
+    }
+  });
+  function motes(sc, lt) {
+    sc.querySelectorAll(".motes").forEach((m) => m._p.forEach((p) => {
+      const y = ((p.y + p.vy * lt) % 1920 + 1920) % 1920;
+      const x = p.x + p.vx * lt + Math.sin(lt * 0.8 + p.ph) * 18;
+      p.el.style.transform = `translate(${x}px,${y}px)`;
+      p.el.style.opacity = p.a * (0.55 + 0.45 * Math.sin(lt * 1.7 + p.ph));
+    }));
+  }
+
+  /* ---------- 4 · tarjetas de productos ---------- */
+  const PRODS = [
+    { img: "letra-a-1-crema.jpg", nm: "Letra decorada personalizada", ds: "Tu inicial · Tus colores", pos: "50% 55%" },
+    { img: "letra-resina-iluminada.jpg", nm: "Letra de resina iluminada", ds: "Flores naturales · Luz cálida", pos: "50% 50%" },
+    { img: "calavera-flores-con-luz.jpg", nm: "Calavera de resina con flores", ds: "Con o sin base LED", pos: "50% 45%" },
+    { img: "calabaza-resina-flores.jpg", nm: "Calabaza de resina con flores", ds: "Flores secas · Purpurina", pos: "50% 55%" },
+    { img: "calavera-blanco.jpg", nm: "Colgante de resina Calavera", ds: "40 × 40 cm · Con luces", pos: "50% 45%" },
+    { img: "ambientador-cachirulo.jpg", nm: "Ambientador del Cachirulo", ds: "Yeso cerámico · Virgen del Pilar", pos: "40% 55%" },
+  ];
+  const cardsEl = $("s4-cards");
+  PRODS.forEach((p, i) => {
+    const c = document.createElement("div");
+    c.className = "card";
+    c.innerHTML = `<div class="frame"><img src="../build/prep/${p.img}" style="object-position:${p.pos}" alt=""></div>` +
+      `<div class="lbl"><div class="nm">${p.nm}</div><div class="ds">${p.ds}</div></div>`;
+    cardsEl.appendChild(c);
+    p.el = c;
+    p.img_el = c.querySelector("img");
+  });
+  function prodTimes() {
+    return [chunk("productos", 0).a, chunk("productos", 1).a, chunk("productos", 2).a,
+      wordAt("productos", 2, "calabazas"), chunk("productos", 3).a, chunk("productos", 4).a];
+  }
+
+  /* ---------- 5 · colores ---------- */
+  // los colores que ofrece la tienda (Wix): 8 para la letra de resina y 4 para la letra decorada
+  const COLS = [["Rojo", "#D32F2F", "rojo"], ["Naranja", "#F57C1F", "naranja"], ["Amarillo", "#F7D04A", "amarillo"], ["Verde claro", "#9ED9A6", "verde-claro"],
+    ["Azul claro", "#9CC9F0", "azul-claro"], ["Azul oscuro", "#2C4C94", "azul-oscuro"], ["Morado", "#9B5FC0", "morado"], ["Rosa oscuro", "#E2508E", "rosa-oscuro"]];
+  const RES = COLS.map((c) => "resina-" + c[2]);
+  const DEC = ["decorada-rojo", "decorada-azul-oscuro", "decorada-morado", "decorada-rosa-oscuro"];
+  const s5a = [], s5b = [], s5sw = [];
+  RES.forEach((f, i) => { const im = new Image(); im.src = `../build/prep/colores/${f}.jpg`; im.className = "cover"; $("s5-a").appendChild(im); s5a.push(im); });
+  DEC.forEach((f, i) => { const im = new Image(); im.src = `../build/prep/colores/${f}.jpg`; im.className = "cover"; $("s5-b").appendChild(im); s5b.push(im); });
+  COLS.forEach(([n, hex], i) => {
+    const d = document.createElement("div");
+    d.className = "sw";
+    d.style.background = hex;
+    d.style.left = (122 + i * 112) + "px";
+    d.style.top = "1180px";
+    $("s5-sw").appendChild(d);
+    s5sw.push(d);
+  });
+
+  /* ---------- 6 · abanico de calaveras ---------- */
+  const FAN = ["con-luz-negro", "con-luz-burdeos", "con-luz-azul-oscuro", "con-luz-morado-oscuro", "con-luz-rosa-oscuro"];
+  const fan = FAN.map((f, i) => {
+    const d = document.createElement("div");
+    d.className = "frame";
+    d.style.cssText = "left:360px;top:960px;width:360px;height:450px;border-radius:24px;border:8px solid #FFFDF9";
+    d.innerHTML = `<img src="../build/prep/calavera/${f}.jpg" style="object-position:50% 40%" alt="">`;
+    $("s6-fan").appendChild(d);
+    return d;
+  });
+
+  /* ---------- 9 · miniaturas ---------- */
+  const TH = ["letra-resina-iluminada.jpg", "calavera-flores-con-luz.jpg", "calabaza-resina-flores.jpg", "calavera-blanco.jpg", "ambientador-cachirulo.jpg"];
+  const thumbs = TH.map((f, i) => {
+    const d = document.createElement("div");
+    d.className = "thumb";
+    d.style.left = (95 + i * 186) + "px";
+    d.style.top = "310px";
+    d.innerHTML = `<img src="../build/prep/${f}" alt="">`;
+    $("s9-thumbs").appendChild(d);
+    return d;
+  });
+
+  /* ---------- tienda ---------- */
+  let SHOP = null;           // build/prep/tienda.json
+  const SCR_TOP = 142, SCR_H = 1250 - 142;
+
+  /* ---------- escenas ---------- */
+  const scenes = ORDER.map((_, i) => $("s" + (i + 1)));
+
+  const draw = [
+    // 1 · presentación
+    function (t, lt) {
+      const sc = scenes[0];
+      sc.querySelector(".hero").style.transform = `scale(${lerp(1.1, 1.0, ease(prog(t, 0, 5.2)))}) translateX(${lerp(0, 60, prog(t, 0, 5.2))}px)`;
+      rise($("s1-eb"), t, 0.1, 0.7);
+      const k = ease(prog(t, 0.6, 1.9));
+      const nm = $("s1-name");
+      nm.style.clipPath = `inset(-30% ${112 - k * 124}% -30% -12%)`;   // con margen para los rasgos de la letra
+      nm.style.opacity = k > 0 ? 1 : 0;
+      nm.style.transform = `translateY(${(1 - out3(prog(t, 0.6, 1.6))) * 16}px)`;
+      const r = out3(prog(t, 1.7, 2.4));
+      $("s1-rule").style.opacity = r;
+      $("s1-rule").querySelectorAll("i").forEach((e) => (e.style.width = 150 * r + "px"));
+      rise($("s1-tag"), t, 2.0, 0.8);
+      const bk = outBack(prog(t, chunk("hola", 2).a - 0.15, chunk("hola", 2).a + 0.45));
+      set($("s1-badge"), clamp(bk * 1.5), `scale(${lerp(0.7, 1, bk)})`);
+      motes(sc, lt);
+    },
+    // 2 · historia
+    function (t, lt) {
+      const sc = scenes[1];
+      rise($("s2-eb"), lt, 0.15, 0.6);
+      rise($("s2-title"), lt, 0.25, 0.7);
+      const pk = out3(prog(lt, 0.2, 1.1));
+      set($("s2-pol"), pk, `translateY(${(1 - pk) * 80}px) rotate(${lerp(-6, -2.2, pk)}deg)`);
+      $("s2-img").style.transform = `scale(${lerp(1.04, 1.12, prog(lt, 0, 6.5))})`;
+      const tm = chunk("historia", 2).a - 0.25;
+      [-7, 4, 8].forEach((rot, i) => {
+        const k = outBack(prog(t, tm + i * 0.22, tm + i * 0.22 + 0.55));
+        set($("s2-m" + i), clamp(k * 1.4), `translateY(${(1 - k) * 120}px) rotate(${rot * k}deg) scale(${lerp(0.8, 1, k)})`);
+      });
+      motes(sc, lt);
+    },
+    // 3 · cómo
+    function (t, lt) {
+      rise($("s3-eb"), lt, 0.1, 0.6);
+      rise($("s3-title"), lt, 0.2, 0.7);
+      const fk = out3(prog(lt, 0.1, 0.8));
+      set($("s3-frame"), fk, `translateY(${(1 - fk) * 60}px)`);
+      const tc = [chunk("como", 0).a, chunk("como", 2).a, chunk("como", 3).a, wordAt("como", 3, "yeso")];
+      // encuadres cerrados de cada foto (escala, origen)
+      const crop = [[1.55, "45% 60%"], [1.8, "40% 38%"], [2.05, "20% 42%"], [2.3, "50% 52%"]];
+      for (let i = 0; i < 4; i++) {
+        const im = $("s3-i" + i);
+        const a = i === 0 ? B[2] - 0.5 : tc[i] - 0.25;
+        const op = i === 0 ? 1 : prog(t, a, a + 0.35);
+        const nx = i < 3 ? tc[i + 1] + 0.2 : B[3] + 0.4;
+        const z = crop[i][0] * lerp(1, 1.08, prog(t, a, nx));
+        im.style.opacity = op;
+        im.style.transformOrigin = crop[i][1];
+        im.style.transform = `scale(${z})`;
+        const c = $("s3-c" + i);
+        const ck = outBack(prog(t, tc[i] - 0.1 + (i === 0 ? 0.4 : 0), tc[i] + 0.35 + (i === 0 ? 0.4 : 0)));
+        set(c, clamp(ck * 1.5), `scale(${lerp(0.6, 1, ck)})`);
+      }
+    },
+    // 4 · productos (carrusel)
+    function (t, lt) {
+      const ts = prodTimes();
+      const SL = 0.42;   // duración del deslizamiento
+      let cur = 0;
+      for (let i = 0; i < ts.length; i++) if (t >= ts[i] - SL * 0.6) cur = i;
+      PRODS.forEach((p, i) => {
+        const a = ts[i] - SL * 0.6;                 // entra
+        const b = i < ts.length - 1 ? ts[i + 1] - SL * 0.6 : 1e9;  // sale
+        let x = 0, s = 1, op = 1;
+        if (i === 0 && t < a + SL) { const k = out3(prog(lt, 0.05, 0.7)); x = 0; op = k; s = lerp(0.94, 1, k); }
+        else if (t < a) { x = 1100; op = 0; }
+        else if (t < a + SL) { const k = ease(prog(t, a, a + SL)); x = lerp(1100, 0, k); }
+        if (t >= b) { const k = ease(prog(t, b, b + SL)); x = lerp(0, -1000, k); s = lerp(1, 0.9, k); op = 1 - k * 0.6; }
+        const vis = op > 0.001 && x < 1090 && x > -1090;
+        p.el.style.visibility = vis ? "visible" : "hidden";
+        p.el.style.opacity = op;
+        p.el.style.transform = `translateX(${x}px) scale(${s})`;
+        p.img_el.style.transform = `scale(${lerp(1.0, 1.08, prog(t, a, (i < ts.length - 1 ? b : B[4]) + SL))})`;
+        p.el.style.zIndex = i;
+      });
+      $("s4-count").textContent = `0${cur + 1}  /  0${PRODS.length}`;
+    },
+    // 5 · personaliza
+    function (t, lt) {
+      const fk = out3(prog(lt, 0.05, 0.6));
+      set($("s5-a"), fk, `translateX(${(1 - fk) * -60}px)`);
+      set($("s5-b"), fk, `translateX(${(1 - fk) * 60}px)`);
+      const t0 = B[4] + 0.5, step = 0.33;
+      const n = COLS.length;
+      const idx = Math.floor(Math.max(0, t - t0) / step);
+      const i0 = idx % n, fade = clamp(((t - t0) % step) / 0.09);
+      const cyc = (arr, k, f) => {
+        const m = arr.length, j = k % m, pv = (j + m - 1) % m;
+        arr.forEach((im, i) => {
+          im.style.opacity = t < t0 ? (i === 0 ? 1 : 0) : i === j ? f : i === pv ? 1 : 0;
+          im.style.zIndex = i === j ? 2 : i === pv ? 1 : 0;
+        });
+      };
+      cyc(s5a, idx, fade);
+      const step2 = step * 2, idx2 = Math.floor(Math.max(0, t - t0) / step2);
+      cyc(s5b, idx2, clamp(((t - t0) % step2) / 0.09));
+      s5sw.forEach((d, i) => {
+        const k = outBack(prog(lt, 0.3 + i * 0.05, 0.75 + i * 0.05));
+        const on = t >= t0 && i === i0;
+        d.classList.toggle("on", on);
+        set(d, clamp(k * 1.4), `scale(${lerp(0.3, 1, k) * (on ? 1.18 : 1)})`);
+      });
+      const nk = outBack(prog(t, chunk("personaliza", 1).a - 0.1, chunk("personaliza", 1).a + 0.4));
+      set($("s5-note"), clamp(nk * 1.4), `scale(${lerp(0.7, 1, nk)})`);
+    },
+    // 6 · calidad
+    function (t, lt) {
+      const sc = scenes[5];
+      const sk = outBack(prog(lt, 0.1, 0.8));
+      const tu0 = chunk("calidad", 2).a;
+      const up = ease(prog(t, tu0 - 0.35, tu0 + 0.3));   // el sello sube para dejar sitio a las piezas
+      set($("s6-seal"), clamp(sk * 1.5), `translateY(${lerp(440, 0, up)}px) scale(${lerp(0.5, 1, sk) * lerp(1.45, 1, up)}) rotate(${lerp(-25, 0, out3(prog(lt, 0.1, 0.9)))}deg)`);
+      const mk = out3(prog(t, chunk("calidad", 1).a - 0.15, chunk("calidad", 1).a + 0.45));
+      set($("s6-mat"), mk * (1 - prog(t, tu0 - 0.35, tu0 - 0.05)), `translateY(${(1 - mk) * 30}px)`);
+      $("s6-rot").setAttribute("transform", `rotate(${lt * 14} 200 200)`);
+      const q = prog(t, chunk("calidad", 1).a - 0.2, chunk("calidad", 1).a + 0.3);
+      $("s6-in").style.opacity = 0.35 + 0.65 * q;
+      $("s6-c1").style.strokeWidth = 3 + 3 * Math.sin(Math.PI * q);
+      const tu = chunk("calidad", 2).a;
+      rise($("s6-title"), t, tu - 0.1, 0.6);
+      rise($("s6-sub"), t, tu + 0.1, 0.6);
+      fan.forEach((d, i) => {
+        const k = out3(prog(t, tu + i * 0.08, tu + 0.7 + i * 0.08));
+        const off = i - 2;
+        const x = off * 158 * k, rot = off * 7 * k, y = Math.abs(off) * 26 * k + (1 - k) * 160;
+        set(d, clamp(k * 2), `translate(${x}px,${y}px) rotate(${rot}deg)`);
+        d.style.zIndex = 10 - Math.abs(off);
+      });
+      motes(sc, lt);
+    },
+    // 7 · mayoristas
+    function (t, lt) {
+      rise($("s7-eb"), lt, 0.1, 0.6);
+      rise($("s7-title"), lt, 0.2, 0.7);
+      const lk = ease(prog(lt, 0.3, 1.9));
+      $("s7-lines").querySelectorAll("path").forEach((p, i) => {
+        const k = clamp(lk * 1.6 - i * 0.12);
+        p.style.strokeDasharray = "1 1";
+        p.style.strokeDashoffset = 1 - k;
+      });
+      $("s7-fill").style.opacity = prog(lt, 1.2, 1.8);
+      $("s7-awn").style.opacity = prog(lt, 1.4, 2.0);
+      const on = chunk("mayoristas", 1).a;   // «y vendemos al por mayor»: se encienden las luces
+      $("s7-goods").style.opacity = prog(t, on - 0.6, on - 0.1);
+      $("s7-lamp").style.opacity = prog(t, on, on + 0.3) * (0.8 + 0.2 * Math.sin(lt * 9));
+      $("s7-win").style.opacity = lerp(0.35, 1, prog(t, on, on + 0.3));
+      const ca = chunk("mayoristas", 0).a;
+      [0, 1, 2].forEach((i) => {
+        const k = outBack(prog(t, ca + 0.15 + i * 0.18, ca + 0.6 + i * 0.18));
+        set($("s7-c" + i), clamp(k * 1.5), `scale(${lerp(0.6, 1, k)})`);
+      });
+      const pk = outBack(prog(t, chunk("mayoristas", 2).a - 0.1, chunk("mayoristas", 2).a + 0.45));
+      set($("s7-cond"), clamp(pk * 1.5), `scale(${lerp(0.7, 1, pk)})`);
+    },
+    // 8 · tienda online
+    function (t, lt) {
+      const url = "alldesignkarl.com";
+      const n = Math.round(url.length * prog(lt, 0.25, 1.1));
+      $("s8-url").textContent = url.slice(0, n) || " ";
+      const ph = out3(prog(lt, 0.0, 0.7));
+      set($("s8-phone"), ph, `translateY(${(1 - ph) * 140}px) scale(${lerp(0.92, 1, ph)})`);
+      if (!SHOP) return;
+      const S = 600 / SHOP.ancho;   // px de pantalla por punto CSS de la web
+      const P = SHOP.puntos, sec = SHOP.secciones;
+      const vis = SCR_H / S;        // puntos de la web que caben en pantalla
+      const c0 = chunk("tienda", 0).a, c1 = chunk("tienda", 1).a, c2 = chunk("tienda", 2).a, c3 = chunk("tienda", 3).a;
+      const yGrid = sec.rejilla - 40;
+      const yMay = sec.mayoristas + 20;
+      const yCards = Math.min(P.minimo.y - 40, P.cuenta.y + P.cuenta.h + 40 - vis);
+      const keys = [[B[7], 0], [c0 + 0.1, 0], [c0 + 0.85, yGrid], [c1 - 0.05, yGrid], [c1 + 0.6, yMay], [c1 + 1.0, yMay], [c1 + 1.45, yCards], [99, yCards]];
+      let y = 0;
+      for (let i = 0; i < keys.length - 1; i++) {
+        const [ta, ya] = keys[i], [tb, yb] = keys[i + 1];
+        if (t >= ta && t <= tb) { y = lerp(ya, yb, ease(prog(t, ta, tb))); break; }
+        if (t > tb) y = yb;
+      }
+      $("s8-pg").style.transform = `translateY(${-y * S}px)`;
+      // resaltados: «crea tu cuenta», «pedido mínimo», «envío»
+      const hl = $("s8-hl");
+      const tc = c1 + 1.5;
+      const seq = [[tc, P.cuenta], [c2, P.minimo], [c3, P.envio]];
+      let cur = null, a = 0;
+      seq.forEach(([ts, r]) => { if (t >= ts - 0.1) { cur = r; a = ts - 0.1; } });
+      if (cur) {
+        const pad = 8;
+        hl.style.left = (cur.x - pad) * S + "px";
+        hl.style.top = (cur.y - pad) * S + "px";
+        hl.style.width = (cur.w + 2 * pad) * S + "px";
+        hl.style.height = (cur.h + 2 * pad) * S + "px";
+        const k = out3(prog(t, a, a + 0.3));
+        hl.style.opacity = k;
+        hl.style.transform = `scale(${lerp(1.08, 1, k)})`;
+      } else hl.style.opacity = 0;
+      const s0 = outBack(prog(t, c2 - 0.05, c2 + 0.45)), s1 = outBack(prog(t, c3 - 0.05, c3 + 0.45));
+      set($("s8-st0"), clamp(s0 * 1.5), `scale(${lerp(0.4, 1, s0)}) rotate(${lerp(-30, 8, s0)}deg)`);
+      set($("s8-st1"), clamp(s1 * 1.5), `scale(${lerp(0.4, 1, s1)}) rotate(${lerp(30, -8, s1)}deg)`);
+    },
+    // 9 · cierre
+    function (t, lt) {
+      const sc = scenes[8];
+      $("s9-bg").style.transform = `scale(${lerp(1.05, 1.0, prog(lt, 0, 6))})`;
+      thumbs.forEach((d, i) => {
+        const k = outBack(prog(lt, 0.1 + i * 0.09, 0.6 + i * 0.09));
+        set(d, clamp(k * 1.5), `translateY(${(1 - k) * 60}px) scale(${lerp(0.6, 1, k)})`);
+      });
+      const k = ease(prog(lt, 0.3, 1.5));
+      const nm = $("s9-name");
+      nm.style.clipPath = `inset(-30% ${112 - k * 124}% -30% -12%)`;   // con margen para los rasgos de la letra
+      const r = out3(prog(lt, 1.2, 1.8));
+      $("s9-rule").style.opacity = r;
+      $("s9-rule").querySelectorAll("i").forEach((e) => (e.style.width = 150 * r + "px"));
+      rise($("s9-tag"), t, chunk("cierre", 1).a - 0.2, 0.7);
+      [0, 1, 2].forEach((i) => rise($("s9-l" + i), lt, 1.9 + i * 0.22, 0.6, 26));
+      const pk = outBack(prog(lt, 2.8, 3.3));
+      set($("s9-pill"), clamp(pk * 1.5), `scale(${lerp(0.7, 1, pk)})`);
+      rise($("s9-eb"), lt, 3.2, 0.6, 20);
+      motes(sc, lt);
+    },
+  ];
+
+  /* ---------- subtítulos ---------- */
+  const CAPS = [];
+  window.TIEMPOS.forEach((f) => f.trozos.forEach((c) => CAPS.push(c)));
+  CAPS.forEach((c, i) => {
+    const nx = CAPS[i + 1];
+    c.end = nx && nx.a - c.b < 0.7 ? nx.a : c.b + 0.35;
+  });
+  const capEl = $("cap"), capSpan = capEl.querySelector("span");
+  const BRAND = /Alldesign Karl/g;
+  function captions(t) {
+    let c = null;
+    for (const x of CAPS) if (t >= x.a - 0.06 && t < x.end) c = x;
+    if (!c) { capEl.style.opacity = 0; return; }
+    if (capSpan._t !== c.t) { capSpan._t = c.t; capSpan.innerHTML = c.t.replace(BRAND, "<b>Alldesign Karl</b>"); }
+    const k = out3(prog(t, c.a - 0.06, c.a + 0.1));
+    const prev = CAPS[CAPS.indexOf(c) - 1];
+    const joined = prev && prev.end === c.a;  // seguido del anterior: sin salto
+    const o = (joined ? 1 : k) * (1 - prog(t, c.end - 0.12, c.end));
+    capEl.style.opacity = o;
+    capEl.style.transform = `translateY(${joined ? 0 : (1 - k) * 14}px)`;
+  }
+
+  function renderAt(t) {
+    t = clamp(t, 0, DUR - 1e-3);
+    for (let i = 0; i < scenes.length; i++) {
+      const sc = scenes[i];
+      const a = B[i], b = B[i + 1];
+      const on = t >= a - 0.3 && t < b + 0.3;
+      sc.style.visibility = on ? "visible" : "hidden";
+      if (!on) continue;
+      // la escena que entra va encima y aparece con un fundido y un leve acercamiento
+      const k = i === 0 ? 1 : ease(prog(t, a - 0.3, a + 0.25));
+      sc.style.opacity = k;
+      sc.style.transform = `scale(${lerp(1.035, 1, k)})`;
+      sc.style.zIndex = i;
+      draw[i](t, t - a);
+    }
+    captions(t);
+  }
+
+  async function init() {
+    SHOP = await fetch("../build/prep/tienda.json").then((r) => r.json());
+    await document.fonts.load("200px 'Pinyon Script'");
+    await Promise.all(["400", "500", "600"].map((w) => document.fonts.load(`${w} 40px 'Montserrat'`)));
+    await Promise.all(["400", "500", "600"].map((w) => document.fonts.load(`${w} 40px 'Cormorant Garamond'`)));
+    await document.fonts.load("italic 500 40px 'Cormorant Garamond'");
+    await document.fonts.ready;
+    const imgs = [...document.images];
+    await Promise.all(imgs.map((im) => (im.complete ? im.decode().catch(() => 0) : new Promise((r) => { im.onload = im.onerror = r; }).then(() => im.decode().catch(() => 0)))));
+    const svgImgs = [...document.querySelectorAll("svg image")].map((e) => e.getAttribute("href"));
+    await Promise.all(svgImgs.map((u) => new Promise((r) => { const im = new Image(); im.onload = im.onerror = r; im.src = u; })));
+    renderAt(0);
+  }
+
+  // submuestras por fotograma (desenfoque de movimiento) en los momentos rápidos
+  function samplesAt(t) {
+    if (!SHOP) return 1;
+    const c1 = chunk("tienda", 1).a;
+    if (t > c1 && t < c1 + 1.5) return 6;                       // bajada rápida por la tienda
+    const ts = prodTimes();
+    if (ts.some((x) => t > x - 0.3 && t < x + 0.2)) return 4;  // deslizamiento del carrusel
+    if (B.some((x) => t > x - 0.3 && t < x + 0.25)) return 3;   // cambios de escena
+    return 1;
+  }
+  function shutterAt() { return 0.5; }
+
+  window.PROMO = { init, renderAt, samplesAt, shutterAt, fps: FPS, dur: DUR };
+
+  // vista previa en el navegador: promo.html?play
+  if (location.search.includes("play")) {
+    init().then(() => { const t0 = performance.now(); const loop = () => { renderAt(((performance.now() - t0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); });
+  }
+})();
+</script>
+</body>
+</html>
