@@ -715,9 +715,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ivory)}
   function samplesAt(t) {
     if (!SHOP) return 1;
     const c1 = chunk("tienda", 1).a;
-    if (t > c1 && t < c1 + 1.5) return 6;                       // bajada rápida por la tienda
+    if (t > c1 && t < c1 + 1.5) return 12;                      // bajada rápida por la tienda
     const ts = prodTimes();
-    if (ts.some((x) => t > x - 0.3 && t < x + 0.2)) return 4;  // deslizamiento del carrusel
+    if (ts.some((x) => t > x - 0.3 && t < x + 0.2)) return 10; // deslizamiento del carrusel
     if (B.some((x) => t > x - 0.3 && t < x + 0.25)) return 3;   // cambios de escena
     return 1;
   }
