@@ -643,10 +643,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--ivory)}
         const k = outBack(prog(lt, 0.1 + i * 0.09, 0.6 + i * 0.09));
         set(d, clamp(k * 1.5), `translateY(${(1 - k) * 60}px) scale(${lerp(0.6, 1, k)})`);
       });
-      const k = ease(prog(lt, 0.3, 1.5));
+      const k = ease(prog(lt, 0.15, 1.0));   // se escribe mientras la voz dice «Somos Alldesign Karl»
       const nm = $("s9-name");
       nm.style.clipPath = `inset(-30% ${112 - k * 124}% -30% -12%)`;   // con margen para los rasgos de la letra
-      const r = out3(prog(lt, 1.2, 1.8));
+      const r = out3(prog(lt, 0.9, 1.5));
       $("s9-rule").style.opacity = r;
       $("s9-rule").querySelectorAll("i").forEach((e) => (e.style.width = 150 * r + "px"));
       rise($("s9-tag"), t, chunk("cierre", 1).a - 0.2, 0.7);
